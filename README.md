@@ -33,4 +33,4 @@
     - CMD: Set the default command to execute when image is runned
 
 - docker -t build <username>/<projectname>:latest(version number) .: enables you to tag image and give them names when they are generated instead of having them generate ID's which is difficult to remember
-- docker 
+- docker commit -c 'CMD ["<startup command>"] <container_id>: This command helps you generate an image from a container manually
