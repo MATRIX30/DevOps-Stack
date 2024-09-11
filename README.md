@@ -22,3 +22,15 @@
 - docker run -it <image name> sh: This will create and start a container with the shell running
 
 # creation of Images
+
+- docker build . : build an image from a Dockerfile
+
+## docker file structure:
+
+-  name of file must be : Dockerfile
+    - FROM: use to Build base image
+    - RUN: Command to run to install dependencies
+    - CMD: Set the default command to execute when image is runned
+
+- docker -t build <username>/<projectname>:latest(version number) .: enables you to tag image and give them names when they are generated instead of having them generate ID's which is difficult to remember
+- docker 
