@@ -40,3 +40,5 @@
 - docker run -p <source port on local pc>: < destination port on docker> <image name(id)>: this will
 help you to map a local port to a port in docker eg docker run -p 8080: 4000 image-name: this will run the image-name container and 
 map port 8080 of your machine to port 4000 of docker
+- WORKDIR </path to working directory>: this will enable you to create a directory where your program files will be stored and it will
+serve as the main program directory or reference directory
