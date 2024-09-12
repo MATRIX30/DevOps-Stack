@@ -34,3 +34,4 @@
 
 - docker -t build <username>/<projectname>:latest(version number) .: enables you to tag image and give them names when they are generated instead of having them generate ID's which is difficult to remember
 - docker commit -c 'CMD ["<startup command>"] <container_id>: This command helps you generate an image from a container manually
+- COPY <source address> <destination>: this command enables you to copy local files to image directory during the build process eg COPY ./ ./ copies from the local current director to the images current directory
