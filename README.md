@@ -42,3 +42,37 @@ help you to map a local port to a port in docker eg docker run -p 8080: 4000 ima
 map port 8080 of your machine to port 4000 of docker
 - WORKDIR </path to working directory>: this will enable you to create a directory where your program files will be stored and it will
 serve as the main program directory or reference directory
+
+
+### Docker compose
+Generally it enables you to perform the normal command we did in docker but now allowing us to run multiple containers with a single command and to manage multiple commands in a more compact command but we need to create a configuration file for docker compose to use called *docker-compose.yml*
+- docker compose up: this command is equivalent to docker run and it will run all containers(services) provided in the docker docker-compose file
+- docker compose down: is thesame like docker stop  and will stop multiple containers specified in the docker-compose config file
+- docker compose up --build: it will build the containers based on the docker-compose file and startup the containers while providing networking functionalities for the containers to communicate
+- sample docker compose file looks as follows
+### sample docker-compose.yml file
+```yml
+# specify the version number of docker-compose to use
+version: "3"
+
+# specify the containers or services to create
+services:
+	redis-server:
+		# build the service redis-server from docker-hub image called redis
+		image: "redis"
+	node-app:
+		# build node-app service from docker file ie Dockerfile as we did with docker build . 
+		# on the current directory
+		build: .
+
+		# specify port mapping
+		port:
+			- "8080:8047" 
+		# specify restart policy which handles what will happen if a container process fails we have 3 of them
+		# - "no" this must be in qoute and its the default which means we should never restart a container if it fails
+		# always: means always restart container
+		# on-failure: only restart if container process failed ie exits with a status code different from 0
+		# unless-stopped: always restart unless if the process is stopped by developer
+		
+		restart: "on"
+```
