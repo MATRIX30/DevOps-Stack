@@ -51,7 +51,7 @@ Generally it enables you to perform the normal command we did in docker but now 
 - docker compose up --build: it will build the containers based on the docker-compose file and startup the containers while providing networking functionalities for the containers to communicate
 - sample docker compose file looks as follows
 ### sample docker-compose.yml file
-```yml
+```yaml
 # specify the version number of docker-compose to use
 version: "3"
 
@@ -76,3 +76,5 @@ services:
 		
 		restart: "on"
 ```
+ 
+ - docker compose ps : help you view the status of all containers(status) in docker compose files
