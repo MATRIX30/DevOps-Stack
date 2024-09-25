@@ -78,3 +78,14 @@ services:
 ```
  
  - docker compose ps : help you view the status of all containers(status) in docker compose files
+
+ - docker build -f <custom docker file> . : the -f parameter enables you specify the specific docker file to execute. 
+ - Dockerfile is the docker file to execute in production 
+ - Dockerfile.dev is the main file to execute during development
+
+#### some useful node commands
+- npm run start: to run application in developer mode
+- npm run test: to run test runner for project
+- npm run build: to run program in production mode
+
+## next step
