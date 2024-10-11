@@ -37,3 +37,13 @@ services:
     volumes:
       - /app/node_modules
       - ./client:/app
+  nginx:
+    restart: always
+    ports:
+      - "3050:80"
+    build:
+      dockerfile: Dockerfile.dev
+      context: ./nginx
+    
+    volumes:
+      - ./nginx:/app
