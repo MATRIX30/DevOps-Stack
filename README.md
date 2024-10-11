@@ -47,7 +47,7 @@ serve as the main program directory or reference directory
 ### Docker compose
 Generally it enables you to perform the normal command we did in docker but now allowing us to run multiple containers with a single command and to manage multiple commands in a more compact command but we need to create a configuration file for docker compose to use called *docker-compose.yml*
 - docker compose up: this command is equivalent to docker run and it will run all containers(services) provided in the docker docker-compose file
-- docker compose down: is thesame like docker stop  and will stop multiple containers specified in the docker-compose config file
+- docker compose down: is the same like docker stop  and will stop multiple containers specified in the docker-compose config file
 - docker compose up --build: it will build the containers based on the docker-compose file and startup the containers while providing networking functionalities for the containers to communicate
 - sample docker compose file looks as follows
 ### sample docker-compose.yml file
@@ -88,4 +88,4 @@ services:
 - npm run test: to run test runner for project
 - npm run build: to run program in production mode
 
-## next step
+## CI/CD piple
