@@ -1,4 +1,4 @@
-# Docker
+## Docker
 
 - **docker run <image-name>** to create and start a docker container with its default command
 - **docker ps:** to list all the running containers
